@@ -1,0 +1,11 @@
+version: '3'
+services:
+   react-webpack:
+    build: .
+    container_name: webpack 
+    ports:
+    - "3000:3000"
+    volumes:
+      - ./src/js/:/app/src/js/:ro
+    environment:
+    - port=3000
